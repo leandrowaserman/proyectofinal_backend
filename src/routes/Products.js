@@ -20,7 +20,7 @@ router.post('/',(req,res)=>{
         ProductService.add(product).then(result=>res.send(result))
     }
     else{
-        res.send({error:-1, description:"ruta 'x' método 'y' no autorizada"})
+        res.send({status:"error", description:`ruta ${req.url} método ${req.method} no autorizada`})
     }
 })
 router.put('/:id',(req,res)=>{
@@ -32,7 +32,7 @@ router.put('/:id',(req,res)=>{
         ProductService.overwrite(product, id).then(result=>res.send(result))
     }
     else{
-        res.send({error:-1, description:"ruta 'x' método 'y' no autorizada"})
+        res.send({status:"error", description:`ruta ${req.url} método ${req.method} no autorizada`})
     }
 })
 router.delete('/:id', (req, res)=>{
@@ -43,7 +43,7 @@ router.delete('/:id', (req, res)=>{
         ProductService.deleteById(id).then(result=>res.send(result))
     }
     else{
-        res.send({error:-1, description:"ruta 'x' método 'y' no autorizada"})
+        res.send({status:"error", description:`ruta ${req.url} método ${req.method} no autorizada`})
     }
 })
 
