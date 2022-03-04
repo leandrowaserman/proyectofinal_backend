@@ -18,9 +18,18 @@ router.delete('/:id', (req, res)=>{
 router.post('/:id/products', async (req,res)=>{
     let param = req.params.id
     let productsId = req.body
+    let realProducts = []
     if(isNaN(param))return(res.status(400).send({error:"No es un numero"}))
     let id = parseInt(param)
-    CartService.addProduct(id, productsId).then(result=>res.send(result))
+    await Promise.all (productsId.map(async (products)=>{
+        console.log(products)
+        let verifier = await ProductService.getById(products)
+        console.log(verifier)
+        if(!verifier.error){
+            realProducts.push(products)
+        }
+    })).then(CartService.addProduct(id, realProducts).then(result=>res.send(result)))
+    
 })
 router.get('/:id/products',async(req,res)=>{
     let param = req.params.id
