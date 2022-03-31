@@ -24,5 +24,14 @@
     "thumbnail": "https://image.api.playstation.com/cdn/UP3864/CUSA15289_00/M5AcBZuhiNtN0pzHyxw3uPhdk5HlU11P.png",
     "stock": 2000,
     "description": "el mejor juego de cartas"
+  },
+  {
+    "name": "pico",
+    "thumbnail": "https://arcomaquinarias.com/img/photo/A50003822.jpg",
+    "price": 1600,
+    "stock": 60,
+    "description": "a picar se ha dicho",
+    "id": 4,
+    "timestamp": 1648698008888
   }
 ]
