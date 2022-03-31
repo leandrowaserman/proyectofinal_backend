@@ -24,7 +24,7 @@ const ProductSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    product_id:{
+    checkable_id:{
         type:Number,
         required:true
     }

@@ -16,7 +16,9 @@ class Container {
     }
     getById = async(id) =>{
         if(!id) return{status:"error", error:"Id needed"}
-        return await this.file.find({checkable_id:id})
+        let search = await this.file.find({checkable_id:id})
+        if(search) return(search)
+        return{status:"error", error:"product not found"}
     }
     getAll = async () =>{
         return await this.file.find()
@@ -84,13 +86,14 @@ class Container {
             return{status:"error", error:"data missing"}
         }
         let cart = await this.file.find({checkable_id:id})
-        if(cart){
-            if(cart.products.length==0){
-                return{status:"error", message:"there are no products on the cart"}
-            }else{
+        if(cart[0]){
+            if(cart[0].products.length>=1){
+                let search = await this.file.find({products:id_prod})
+                if(!search.length) return{status:"error", error:"product not found on cart"}
                 await this.file.updateOne({checkable_id:id}, {$pull: {products:id_prod}})
                 return {status:"success", message:"Product deleted"}
             }
+            return{status:"error", message:"there are no products on the cart"}
         }
     }
 }

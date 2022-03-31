@@ -6,7 +6,7 @@ const FsCart = require('./carts/FsCart.js')
 
 const connection = require('../config/config.js');
 
-const dbToUse = 'fs' // "mongo" para usar mongo y "fs" para fs
+const dbToUse = 'mongo' // "mongo" para usar mongo y "fs" para fs
 
 let productDao
 let cartDao

@@ -18,13 +18,14 @@ router.post('/:id/products', async (req,res)=>{
     let param = req.params.id
     let productsId = req.body
     let realProducts = []
+    let nonUsableProducts = []
     if(isNaN(param))return(res.status(400).send({error:"No es un numero"}))
     let id = parseInt(param)
     await Promise.all (productsId.map(async (products)=>{
-        console.log(products)
         let verifier = await productDao.getById(products)
-        console.log(verifier)
-        if(!verifier.status != "error"){
+        if(verifier.error || !verifier.length){
+            nonUsableProducts.push(products)
+        }else{
             realProducts.push(products)
         }
     })).then(cartDao.addProduct(id, realProducts).then(result=>res.send(result)))

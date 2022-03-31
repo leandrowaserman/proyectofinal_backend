@@ -7,7 +7,7 @@ const CartSchema = new mongoose.Schema(
         products:{
             type:Array
         },
-        cart_id:{
+        checkable_id:{
             type:Number,
             required:true
         }
