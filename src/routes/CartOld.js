@@ -1,20 +1,19 @@
-const express = require('express')
-const router = express.Router()
+import express from "express"
+const cartRouter = express.Router()
 
-const daos = require('../daos/index.js')
-const productDao = daos.productDao
-const cartDao = daos.cartDao
+import {productDao, cartDao} from '../daos/index.js'
 
-router.post('/', (req, res)=>{
+
+cartRouter.post('/', (req, res)=>{
     cartDao.create().then(result=>res.send(result))
 })
-router.delete('/:id', (req, res)=>{
+cartRouter.delete('/:id', (req, res)=>{
     let param = req.params.id
     if(isNaN(param))return(res.status(400).send({error:"No es un numero"}))
     let id = parseInt(param)
     cartDao.deleteById(id).then(result=>res.send(result))
 })
-router.post('/:id/products', async (req,res)=>{
+cartRouter.post('/:id/products', async (req,res)=>{
     let param = req.params.id
     let productsId = req.body
     let realProducts = []
@@ -31,7 +30,7 @@ router.post('/:id/products', async (req,res)=>{
     })).then(cartDao.addProduct(id, realProducts).then(result=>res.send(result)))
     
 })
-router.get('/:id/products',async(req,res)=>{
+cartRouter.get('/:id/products',async(req,res)=>{
     let param = req.params.id
     if(isNaN(param))return(res.status(400).send({error:"No es un numero"}))
     let id = parseInt(param)
@@ -54,7 +53,7 @@ router.get('/:id/products',async(req,res)=>{
         res.send(cartProducts)
     }
 })
-router.delete('/:id/products/:id_prod', (req,res)=>{
+cartRouter.delete('/:id/products/:id_prod', (req,res)=>{
     let cartIdParam = req.params.id
     let prodIdParam = req.params.id_prod
     if(isNaN(cartIdParam || prodIdParam))return(res.status(400).send({error:"No es un numero"}))
@@ -62,4 +61,4 @@ router.delete('/:id/products/:id_prod', (req,res)=>{
     let prodId = parseInt(prodIdParam)
     cartDao.deleteProduct(cartId, prodId).then(result=>res.send(result))
 })
-module.exports= router 
+export default cartRouter

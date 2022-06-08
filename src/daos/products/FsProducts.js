@@ -1,5 +1,4 @@
-const FsManager = require ("../../managers/fs/FsManager")
-
+import FsManager from "../../managers/fs/FsManager.js"
 const pathToData = 'src/data/data.json'
 
 class FsProduct{
@@ -24,4 +23,4 @@ class FsProduct{
     }
 }
 
-module.exports = FsProduct
+export default FsProduct

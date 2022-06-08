@@ -1,6 +1,6 @@
-const dbManager = require ("../../managers/mongo/MongoManager.js")
+import dbManager from "../../managers/mongo/MongoManager.js"
 
-const productFile = require("../../models/product.js")
+import productFile from "../../models/product.js"
 
 class MongoProduct{
     productManager = new dbManager(productFile)
@@ -24,4 +24,4 @@ class MongoProduct{
     }
 }
 
-module.exports = MongoProduct
+export default MongoProduct

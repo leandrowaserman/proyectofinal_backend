@@ -1,27 +1,35 @@
-const MongoProducts = require('./products/MongoProducts.js')
-const FsProducts = require('./products/FsProducts.js')
+import MongoProducts from './products/MongoProducts.js'
+import FsProducts from './products/FsProducts.js'
 
-const MongoCart = require('./carts/MongoCart.js')
-const FsCart = require('./carts/FsCart.js')
+import MongoUsers from './users/MongoUsers.js';
+import FsUsers from './users/FsUsers.js';
 
-const connection = require('../config/config.js');
+import connection from '../config/config.js';
+import { loggerWarn } from '../services/logger.js';
+
+
 
 const dbToUse = 'mongo' // "mongo" para usar mongo y "fs" para fs
 
 let productDao
-let cartDao
+let userDao
 
 switch (dbToUse) {
     case 'mongo':
         connection()
         productDao = new MongoProducts()
-        cartDao = new MongoCart()
+        userDao = new MongoUsers()
         break;
     case 'fs':
         productDao = new FsProducts()
-        cartDao = new FsCart()
+        userDao = new FsUsers()
+        loggerWarn.warn("Filesystem not 100% implemented. You might have problems using the app.")
         break
     default:
         break;
 }
-module.exports = {productDao, cartDao}
+export {
+    productDao,
+    userDao
+}
+

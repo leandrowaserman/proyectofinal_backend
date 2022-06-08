@@ -1,0 +1,11 @@
+
+{{#each products}}
+    <div class="card">
+        <img src={{this.thumbnail}} class="thumbnailProduct">
+        <h2 class="nameProduct">{{this.name}}</h2>
+        <h3 class="priceProduct">{{this.price}}AR$</h3>
+        <button class="buttonCart" onclick=addCart(`{{this._id}}`)>Agregar al Carrito</button>
+    </div>
+{{/each}}
+<script>
+</script>

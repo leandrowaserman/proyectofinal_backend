@@ -1,35 +1,16 @@
-const express = require('express')
-const router = express.Router()
-let  daos= require('../daos/index.js')
-const productDao = daos.productDao
+import express from "express"
+import path from 'path';
+const productRouter = express.Router()
 
-router.get('/', (req, res)=>{
-    productDao.getAll().then(result=>res.send(result))
+productRouter.get("/",(req,res)=>{
+    let user = req.session.passport?.user
+    if(!user) res.redirect("/login")
+    if(user.rol != "admin") res.redirect("/")
+    res.sendFile(path.join(process.cwd(), 'src/public/views/productCreator.html'))
 })
-router.get('/:id', (req,res)=>{
-    let param = req.params.id
-    if(isNaN(param))return(res.status(400).send({error:"No es un numero"}))
-    let id = parseInt(param)
-    productDao.getById(id).then(result=>res.send(result))
-})
-router.post('/',(req,res)=>{
-    let product = req.body
-    console.log(req.body)
-    productDao.add(product).then(result=>res.send(result))
-})
-router.put('/:id',(req,res)=>{
-    let param = req.params.id
-    if(isNaN(param))return(res.status(400).send({error:"No es un numero"}))
-    let id = parseInt(param)
-    let product = req.body
-    productDao.update(id, product).then(result=>res.send(result))
-
-})
-router.delete('/:id', (req, res)=>{
-    let param = req.params.id
-    if(isNaN(param))return(res.status(400).send({error:"No es un numero"}))
-    let id = parseInt(param)
-    productDao.deleteById(id).then(result=>res.send(result))
+productRouter.get("/error",(req,res)=>{
+    res.send(`<a href="http://localhost:8080/products">volver</a> <p>Error al crear producto</p>`)
 })
 
-module.exports= router 
+
+export default productRouter 

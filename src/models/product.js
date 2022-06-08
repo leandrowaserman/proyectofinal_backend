@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');   
+import mongoose from "mongoose"
 
 const productCollection = 'products'
 
@@ -23,12 +23,8 @@ const ProductSchema = new mongoose.Schema({
     description:{
         type:String,
         required:true
-    },
-    checkable_id:{
-        type:Number,
-        required:true
     }
 })
-const Product = mongoose.model(productCollection,ProductSchema)
+const ProductModel = mongoose.model(productCollection,ProductSchema)
 
-module.exports = Product
+export default ProductModel

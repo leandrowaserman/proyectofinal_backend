@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <section>
+        <a href="http://localhost:8080/login">login</a>
+    </section>
+    <section>
+        <h2 class="registerTitle">
+            Registro de Usuarios
+        </h2>
+        <form action="/registerForm" enctype="multipart/form-data" method="post">
+            <label style="padding-right: 30px">Mail</label>
+            <input name="mail">
+            <br><br>    
+            <label style="padding-right: 30px">Nombre</label>
+            <input name="name">
+            <label style="padding-right: 30px">Apellido</label>
+            <input name="last_name">
+            <br><br>
+            <label style="padding-right: 30px">Edad</label>
+            <input name="age">
+            <br><br>
+            <label style="padding-right: 30px">Alias</label>
+            <input name="username">
+            <br><br>
+            <label style="padding-right: 30px">Avatar</label>
+            <input type="file" name="file">
+            <br><br>
+            <label style="padding-right: 30px">Telefono celular (sin separacion del numero)</label>
+            <input name="prefix" placeholder="+54">
+            <input name="number" placeholder="12345678">
+            <br><br>
+            <label style="padding-right: 30px">Contraseña</label>
+            <input type="password" name="password">
+            <br><br>
+            <label style="padding-right: 30px">Rol</label>
+            <select name="rol">
+                <option name="user" value="user">Usuario</option>
+                <option name="admin" value="admin">Admin</option>
+            </select>
+            <br><br>
+            <input type="submit">
+        </form>
+    </section>
+    
+</body>
+</html>

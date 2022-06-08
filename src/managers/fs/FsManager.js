@@ -1,4 +1,4 @@
-const fs = require('fs')
+import fs from 'fs'
 
 class Container{
     constructor(ruta){
@@ -62,6 +62,15 @@ class Container{
             let products = JSON.parse(data)
             return(products)
         }
+    }
+    getByMail = async(mail)=>{
+        if(fs.existsSync(this.ruta)){
+            let data = await fs.promises.readFile(this.ruta,'utf-8')
+            let products = JSON.parse(data)
+            let product = products.find(u => u.mail === mail)
+            if(product) return(product)
+            return{status:"error", error:"user not found"}
+        }return{status:"error",message:"no database found"}
     }
     deleteById = async (id) =>{
         if(!id){
@@ -171,4 +180,4 @@ class Container{
 
     }
 }
-module.exports = Container
+export default Container

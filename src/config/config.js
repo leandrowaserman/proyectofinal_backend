@@ -1,6 +1,5 @@
-let mongoose = require("mongoose")
-
-
+import mongoose from "mongoose"
+import { loggerTrace } from "../services/logger.js"
 
 let connection= () => {
     mongoose.connect('mongodb+srv://leandro:coderMongo123@codercluster18335.zfrfd.mongodb.net/ecommerce?retryWrites=true&w=majority',{
@@ -8,9 +7,9 @@ let connection= () => {
     useUnifiedTopology:true
     },error => {
     if(error) throw new Error ('Can not connect to MongoDB')
-    console.log("Connected to Data Base")
+    loggerTrace.trace("Connected to MongoDB Atlas")
 })}
 
 
 
-module.exports = connection
+export default connection
