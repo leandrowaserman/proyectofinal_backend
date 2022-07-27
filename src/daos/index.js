@@ -1,35 +1,37 @@
 import MongoProducts from './products/MongoProducts.js'
-import FsProducts from './products/FsProducts.js'
-
+import MongoOrder from './orders/MongoOrders.js';
 import MongoUsers from './users/MongoUsers.js';
-import FsUsers from './users/FsUsers.js';
+import MongoChat from './chat/MongoChat.js';
 
-import connection from '../config/config.js';
-import { loggerWarn } from '../services/logger.js';
+import connection from './models/config/config.js';
+
+import dotenv from "dotenv"
+
+dotenv.config()
 
 
-
-const dbToUse = 'mongo' // "mongo" para usar mongo y "fs" para fs
+const dbToUse = process.env.DB_TO_USE // para detectar, en un futuro, que persistencia usar (mediante variable de entorno)
 
 let productDao
 let userDao
+let orderDao
+let chatDao
 
 switch (dbToUse) {
     case 'mongo':
         connection()
         productDao = new MongoProducts()
         userDao = new MongoUsers()
+        orderDao = new MongoOrder()
+        chatDao = new MongoChat()
         break;
-    case 'fs':
-        productDao = new FsProducts()
-        userDao = new FsUsers()
-        loggerWarn.warn("Filesystem not 100% implemented. You might have problems using the app.")
-        break
     default:
         break;
 }
 export {
     productDao,
-    userDao
+    userDao,
+    orderDao,
+    chatDao
 }
 

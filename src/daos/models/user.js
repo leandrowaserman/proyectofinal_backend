@@ -5,9 +5,18 @@ const userCollection = 'users'
 
 const CartSchema = new mongoose.Schema(
     {
-        products:{
-            type:Array
-        }
+        products:[
+            {
+                prod_id:{
+                    type:String,
+                    required:true
+                },
+                quantity:{
+                    type:Number,
+                    required:true
+                }
+            }
+        ]
     },
     {
         timestamps:true
@@ -71,4 +80,4 @@ const UserSchema = new mongoose.Schema({
 
 const UserModel = mongoose.model(userCollection,UserSchema)
 
-export default UserModel
+export {UserModel,PhoneSchema}

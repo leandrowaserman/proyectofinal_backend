@@ -1,5 +1,5 @@
 import dbManager from "../../managers/mongo/MongoManager.js"
-import UserModel from "../../models/user.js"
+import {UserModel} from "../models/user.js"
 
 class MongoUsers {
     UserManager = new dbManager(UserModel)
@@ -9,8 +9,11 @@ class MongoUsers {
     getByMail = async(mail) =>{
         return await this.UserManager.getByMail(mail)
     }
-    addProduct = async(id,id_prod)=>{
-        return await this.UserManager.addProduct(id,id_prod)
+    addProduct = async(user,id_prod)=>{
+        return await this.UserManager.addProduct(user,id_prod)
+    }
+    addProductById = async (id,id_prod)=>{
+        return await this.UserManager.addProductById(id,id_prod)
     }
     getCart = async(id)=>{
         return await this.UserManager.getCart(id)

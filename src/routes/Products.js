@@ -1,16 +1,39 @@
 import express from "express"
 import path from 'path';
-const productRouter = express.Router()
+import { adminAuth, loginAuth } from "../auth/authMiddleware.js";
+import {productDao} from "../daos/index.js"
+import dotenv from "dotenv"
+import { mailDisplay } from "../services/helpers.js";
 
-productRouter.get("/",(req,res)=>{
-    let user = req.session.passport?.user
-    if(!user) res.redirect("/login")
-    if(user.rol != "admin") res.redirect("/")
+dotenv.config()
+const productsRouter = express.Router()
+
+productsRouter.get('/',loginAuth,(req,res)=>{
+    res.sendFile(path.join(process.cwd(), 'src/public/views/products.html'))
+
+})
+productsRouter.get("/change",adminAuth,(req,res)=>{
     res.sendFile(path.join(process.cwd(), 'src/public/views/productCreator.html'))
 })
-productRouter.get("/error",(req,res)=>{
-    res.send(`<a href="http://localhost:8080/products">volver</a> <p>Error al crear producto</p>`)
+productsRouter.get("/category/:category",loginAuth,async(req,res)=>{
+    let param = req.params.category
+    let found = await productDao.getByCategory(param)
+    res.send(found)
 })
-
-
-export default productRouter 
+productsRouter.get("/:id",loginAuth,async(req,res)=>{
+    let param = req.params.id
+    let found = await productDao.getById(param)
+    res.send(found)
+})
+productsRouter.put("/:id",async(req,res)=>{ // solo via postman
+    if(!process.env.ROL_POSTMAN!="admin") return res.status(401).send("no tienes derechos para hacer eso")
+    let param = req.params.id
+    let info = req.body
+    res.send(await productDao.update(param, info))
+})
+productsRouter.delete("/:id",async(req,res)=>{ // solo via postman
+    if(!process.env.ROL_POSTMAN!="admin") return res.status(401).send("no tienes derechos para hacer eso")
+    let param = req.params.id
+    res.send(await productDao.deleteById(param))
+})
+export default productsRouter

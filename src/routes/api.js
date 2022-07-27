@@ -1,11 +1,14 @@
 import express from "express"
-import { productDao } from "../daos/index.js"
+import { productDao, userDao } from "../daos/index.js"
 
 const apiRouter = express.Router()
 
-apiRouter.get("/user",(req,res)=>{
+apiRouter.get("/user",async(req,res)=>{
     const altUser = req.session.passport?.user
-    if(altUser)res.send(altUser)
+    if(altUser){
+        let user = await userDao.getByMail(altUser.mail)
+        res.send(user[0])
+    }
     else res.send({connection:"no"})
 })
 apiRouter.get("/products",async(req,res)=>{

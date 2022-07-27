@@ -1,0 +1,18 @@
+
+{{#each newMessages}}
+    {{#iff this.type '==' 'user'}}
+    <div>
+        <p><u>{{this.email}}</u>: {{this.message}} </p>
+    </div>
+    <br>
+    {{else}}
+        <div>
+            <p><u>Admin</u>: {{this.message}}</p>  
+        </div>
+        <br>
+    {{/iff}}
+{{/each}}
+    <form id="sendMessageUser">
+        <input type="text" name="message" placeholder="tu mensaje">
+        <input type="submit" value="send message" />
+    </form>

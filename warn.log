@@ -61,3 +61,4 @@
 [2022-06-07T14:25:36.359] [WARN] warning - ruta /socket.io/socket.io.js solicitada con el método GET no implementado
 [2022-06-07T14:25:36.724] [WARN] warning - ruta /socket.io/socket.io.js solicitada con el método GET no implementado
 [2022-06-07T14:32:23.986] [WARN] warning - ruta /socket.io/socket.io.js solicitada con el método GET no implementado
+[2022-06-20T19:54:14.704] [WARN] warning - Filesystem not 100% implemented. You might have problems using the app.

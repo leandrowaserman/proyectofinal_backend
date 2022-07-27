@@ -1,25 +1,28 @@
 import {createTransport} from "nodemailer"
 import twilio from "twilio"
 import { loggerError, loggerTrace } from "./logger.js";
+import dotenv from "dotenv"
+import { mailDisplay, whatsappDisplay } from "../services/helpers.js";
 
-const ADMIN_DATA = {email:"crystal.breitenberg63@ethereal.email",password:'fcVdF94jSERS4HUByT',phone:"+541136412287"}
+dotenv.config()
+
 const transporter = createTransport({
     host: 'smtp.ethereal.email',
     port: 587,
     auth: {
-        user: ADMIN_DATA.email,
-        pass: ADMIN_DATA.password
+        user: process.env.EMAIL_NODEMAILER,
+        pass: process.env.PASSWORD_NODEMAILER
     },
     tls: {
         rejectUnauthorized: false
     }
 });
-async function registrationEmail (data){ //enviar mail al registrarse
+async function registrationEmail (){ //enviar mail al registrarse
     const registerMailOptions = {
         from: "Server NodeJS",
-        to: ADMIN_DATA.email,
+        to: process.env.EMAIL_NODEMAILER,
         subject:"Nuevo Registro",
-        html:`<h1>Nuevo Usuario Registrado</h1><br><p>${data}</p>`
+        html:`<h1>Nuevo Usuario Registrado</h1>`
     }
     try{
         await transporter.sendMail(registerMailOptions)
@@ -29,14 +32,14 @@ async function registrationEmail (data){ //enviar mail al registrarse
     }
 }
 
-const accountId = "ACa419f332205f9ea05b8418479d6e2193"
-const authToken = "718927ce3a11543e7ee09d1c99688ed1"
+const accountId = process.env.ACCOUNT_ID_TWILIO
+const authToken = process.env.AUTH_TOKEN_TWILIO
 const messageClient = twilio(accountId,authToken)
 async function cartMessage (number, prefix){ //enviar mensaje de proceso del pedido
     try{
         const message = await messageClient.messages.create({
             body:"Su pedido ha sido recibido y se encuentra en proceso.",
-            from:"+19472253008",
+            from:process.env.BOT_PHONE,
             to:`${prefix}${number}`
         })
         loggerTrace.trace("sms enviado con exito")
@@ -46,15 +49,12 @@ async function cartMessage (number, prefix){ //enviar mensaje de proceso del ped
     }
 }
 
-async function newOrderMail (name, mail, data){
+async function newOrderMail (user, data){
     const registerMailOptions = {
         from: "Server NodeJS",
-        to: ADMIN_DATA.email,
-        subject:`Nuevo pedido de ${mail}`,
-        html:`<h1>Pedido de ${name}</h1><br>
-        <pre>
-        <code>${data}</code>
-        </pre>`
+        to: process.env.EMAIL_NODEMAILER,
+        subject:`Nuevo pedido de ${user.mail}`,
+        html:mailDisplay(user,data)
     }
     try{
         await transporter.sendMail(registerMailOptions)
@@ -64,20 +64,19 @@ async function newOrderMail (name, mail, data){
         loggerError.error(err)
     }
 }
-async function newOrderWhatsapp (name,mail,data){
-
+async function newOrderWhatsapp (user,data){
     try{
         const message = await messageClient.messages.create({
-            body: `Pedido de ${name} / mail: ${mail}
-                ${data}`,
-            from: 'whatsapp:+14155238886',
-            to: "whatsapp:+5491136412287"
+            body: whatsappDisplay(user,data),
+            from: `whatsapp:${process.env.WHATSAPP_PHONE}`,
+            to: `whatsapp:${process.env.ADMIN_PHONE}`
         })
         loggerTrace.trace("mensaje whatsapp enviado con exito")
     }
     catch (err){
         loggerError.error(err)
-    }
+    }            
+
 }
 
 export {cartMessage,newOrderMail,registrationEmail, newOrderWhatsapp}

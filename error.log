@@ -195,3 +195,287 @@
   moreInfo: 'https://www.twilio.com/docs/errors/63007',
   details: undefined
 }
+[2022-07-19T18:20:52.860] [ERROR] error - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:784:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:1536:34)
+    at SMTPConnection.<anonymous> (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:540:26)
+    at SMTPConnection._processResponse (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:947:20)
+    at SMTPConnection._onData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:749:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:189:44)
+    at TLSSocket.emit (node:events:527:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2022-07-19T18:20:53.827] [ERROR] error - RestException [Error]: Authenticate
+    at success (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:835:31)
+    at Fulfilled_dispatch [as dispatch] (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1369:30)
+    at RawTask.call (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\asap.js:40:19)
+    at flush (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\raw.js:50:29)
+    at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+  status: 401,
+  code: 20003,
+  moreInfo: 'https://www.twilio.com/docs/errors/20003',
+  details: undefined
+}
+[2022-07-19T18:20:54.569] [ERROR] error - RestException [Error]: Authenticate
+    at success (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:835:31)
+    at Fulfilled_dispatch [as dispatch] (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1369:30)
+    at RawTask.call (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\asap.js:40:19)
+    at flush (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\raw.js:50:29)
+    at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+  status: 401,
+  code: 20003,
+  moreInfo: 'https://www.twilio.com/docs/errors/20003',
+  details: undefined
+}
+[2022-07-20T17:06:41.889] [ERROR] error - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:784:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:1536:34)
+    at SMTPConnection.<anonymous> (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:540:26)
+    at SMTPConnection._processResponse (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:947:20)
+    at SMTPConnection._onData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:749:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:189:44)
+    at TLSSocket.emit (node:events:527:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2022-07-20T17:06:42.829] [ERROR] error - RestException [Error]: Authenticate
+    at success (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:835:31)
+    at Fulfilled_dispatch [as dispatch] (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1369:30)
+    at RawTask.call (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\asap.js:40:19)
+    at flush (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\raw.js:50:29)
+    at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+  status: 401,
+  code: 20003,
+  moreInfo: 'https://www.twilio.com/docs/errors/20003',
+  details: undefined
+}
+[2022-07-20T17:06:43.559] [ERROR] error - RestException [Error]: Authenticate
+    at success (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:835:31)
+    at Fulfilled_dispatch [as dispatch] (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1369:30)
+    at RawTask.call (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\asap.js:40:19)
+    at flush (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\raw.js:50:29)
+    at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+  status: 401,
+  code: 20003,
+  moreInfo: 'https://www.twilio.com/docs/errors/20003',
+  details: undefined
+}
+[2022-07-20T17:37:24.261] [ERROR] error - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:784:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:1536:34)
+    at SMTPConnection.<anonymous> (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:540:26)
+    at SMTPConnection._processResponse (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:947:20)
+    at SMTPConnection._onData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:749:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:189:44)
+    at TLSSocket.emit (node:events:527:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2022-07-20T17:37:25.179] [ERROR] error - RestException [Error]: Authenticate
+    at success (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:835:31)
+    at Fulfilled_dispatch [as dispatch] (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1369:30)
+    at RawTask.call (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\asap.js:40:19)
+    at flush (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\raw.js:50:29)
+    at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+  status: 401,
+  code: 20003,
+  moreInfo: 'https://www.twilio.com/docs/errors/20003',
+  details: undefined
+}
+[2022-07-20T17:37:25.949] [ERROR] error - RestException [Error]: Authenticate
+    at success (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:835:31)
+    at Fulfilled_dispatch [as dispatch] (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1369:30)
+    at RawTask.call (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\asap.js:40:19)
+    at flush (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\raw.js:50:29)
+    at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+  status: 401,
+  code: 20003,
+  moreInfo: 'https://www.twilio.com/docs/errors/20003',
+  details: undefined
+}
+[2022-07-20T17:45:53.065] [ERROR] error - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:784:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:1536:34)
+    at SMTPConnection.<anonymous> (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:540:26)
+    at SMTPConnection._processResponse (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:947:20)
+    at SMTPConnection._onData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:749:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:189:44)
+    at TLSSocket.emit (node:events:527:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2022-07-20T17:45:53.950] [ERROR] error - RestException [Error]: Authenticate
+    at success (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:835:31)
+    at Fulfilled_dispatch [as dispatch] (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1369:30)
+    at RawTask.call (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\asap.js:40:19)
+    at flush (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\raw.js:50:29)
+    at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+  status: 401,
+  code: 20003,
+  moreInfo: 'https://www.twilio.com/docs/errors/20003',
+  details: undefined
+}
+[2022-07-20T17:45:54.657] [ERROR] error - RestException [Error]: Authenticate
+    at success (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:835:31)
+    at Fulfilled_dispatch [as dispatch] (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1369:30)
+    at RawTask.call (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\asap.js:40:19)
+    at flush (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\raw.js:50:29)
+    at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+  status: 401,
+  code: 20003,
+  moreInfo: 'https://www.twilio.com/docs/errors/20003',
+  details: undefined
+}
+[2022-07-20T20:39:50.859] [ERROR] error - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:784:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:1536:34)
+    at SMTPConnection.<anonymous> (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:540:26)
+    at SMTPConnection._processResponse (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:947:20)
+    at SMTPConnection._onData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:749:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:189:44)
+    at TLSSocket.emit (node:events:527:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2022-07-20T20:42:50.908] [ERROR] error - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:784:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:1536:34)
+    at SMTPConnection.<anonymous> (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:540:26)
+    at SMTPConnection._processResponse (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:947:20)
+    at SMTPConnection._onData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:749:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:189:44)
+    at TLSSocket.emit (node:events:527:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2022-07-20T20:48:40.445] [ERROR] error - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:784:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:1536:34)
+    at SMTPConnection.<anonymous> (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:540:26)
+    at SMTPConnection._processResponse (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:947:20)
+    at SMTPConnection._onData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:749:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:189:44)
+    at TLSSocket.emit (node:events:527:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2022-07-20T20:51:16.660] [ERROR] error - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:784:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:1536:34)
+    at SMTPConnection.<anonymous> (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:540:26)
+    at SMTPConnection._processResponse (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:947:20)
+    at SMTPConnection._onData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:749:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:189:44)
+    at TLSSocket.emit (node:events:527:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2022-07-21T15:57:20.962] [ERROR] error - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:784:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:1536:34)
+    at SMTPConnection.<anonymous> (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:540:26)
+    at SMTPConnection._processResponse (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:947:20)
+    at SMTPConnection._onData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:749:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\nodemailer\lib\smtp-connection\index.js:189:44)
+    at TLSSocket.emit (node:events:527:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2022-07-26T22:21:01.406] [ERROR] error - RestException [Error]: Twilio could not find a Channel with the specified From address
+    at success (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:835:31)
+    at Fulfilled_dispatch [as dispatch] (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1369:30)
+    at RawTask.call (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\asap.js:40:19)
+    at flush (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\raw.js:50:29)
+    at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+  status: 400,
+  code: 63007,
+  moreInfo: 'https://www.twilio.com/docs/errors/63007',
+  details: undefined
+}
+[2022-07-26T22:27:52.741] [ERROR] error - RestException [Error]: Twilio could not find a Channel with the specified From address
+    at success (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:835:31)
+    at Fulfilled_dispatch [as dispatch] (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\q\q.js:1369:30)
+    at RawTask.call (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\asap.js:40:19)
+    at flush (C:\Users\Lean\Desktop\Coder\BackEnd\Backend Proyecto Final\node_modules\asap\raw.js:50:29)
+    at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+  status: 400,
+  code: 63007,
+  moreInfo: 'https://www.twilio.com/docs/errors/63007',
+  details: undefined
+}

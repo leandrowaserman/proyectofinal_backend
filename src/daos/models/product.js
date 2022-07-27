@@ -23,8 +23,12 @@ const ProductSchema = new mongoose.Schema({
     description:{
         type:String,
         required:true
+    },
+    category:{
+        type:String,
+        required:true
     }
 })
 const ProductModel = mongoose.model(productCollection,ProductSchema)
 
-export default ProductModel
+export {ProductModel, ProductSchema}

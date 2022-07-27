@@ -1,0 +1,13 @@
+
+    {{#each newMessages}}
+        <div>
+            <p>
+                <u>{{this.email}}</u>:{{this.message}}
+            </p>
+        </div>
+    {{/each}}
+    <form id="sendMessageAdmin">
+        <input type="text" name="mail" placeholder="mail de respuesta">
+        <input type="text" name="message" placeholder="tu mensaje">
+        <input type="submit" value="send message" />
+    </form>

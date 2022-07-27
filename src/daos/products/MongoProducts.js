@@ -1,9 +1,9 @@
 import dbManager from "../../managers/mongo/MongoManager.js"
 
-import productFile from "../../models/product.js"
+import {ProductModel} from "../models/product.js"
 
 class MongoProduct{
-    productManager = new dbManager(productFile)
+    productManager = new dbManager(ProductModel)
     add = async (product) =>{
         return await this.productManager.add(product)
     }
@@ -21,6 +21,9 @@ class MongoProduct{
     }
     deleteAll = async() =>{
         return await this.productManager.deleteAll()
+    }
+    getByCategory = async(category) =>{
+        return await this.productManager.findByCategory(category)
     }
 }
 
