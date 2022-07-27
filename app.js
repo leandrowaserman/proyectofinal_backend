@@ -34,7 +34,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config() 
 const app = express()
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 8080
 let MODE
 if(process.env.DEV_MODE=="produccion"){
     MODE = process.argv.slice(2) || "fork"
