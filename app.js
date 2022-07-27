@@ -13,20 +13,20 @@ import cluster from "cluster";
 import os from "os"
 import dotenv from "dotenv"
 
-import { chatDao, productDao, userDao } from "./daos/index.js";
-import { loggerError, loggerTrace} from "./utils/logger.js"
-import registerRouter from "./routes/Register.js"
-import loginRouter from "./routes/Login.js"
-import {UserModel} from "./daos/models/user.js";
-import {registrationEmail} from "./utils/messaging.js"
-import apiRouter from "./routes/api.js";
-import cartRouter from "./routes/cart.js";
-import logoutRouter from "./routes/logout.js";
-import profileRouter from "./routes/profile.js";
-import { productUploader, userUploader } from "./utils/multer.js";
-import productsRouter from "./routes/Products.js";
-import createHash from "./utils/bcrypt.js";
-import chatRouter from "./routes/chat.js";
+import { chatDao, productDao, userDao } from "./src/daos/index.js";
+import { loggerError, loggerTrace} from "./src/utils/logger.js"
+import registerRouter from "./src/routes/Register.js"
+import loginRouter from "./src/routes/Login.js"
+import {UserModel} from "./src/daos/models/user.js";
+import {registrationEmail} from "./src/utils/messaging.js"
+import apiRouter from "./src/routes/api.js";
+import cartRouter from "./src/routes/cart.js";
+import logoutRouter from "./src/routes/logout.js";
+import profileRouter from "./src/routes/profile.js";
+import { productUploader, userUploader } from "./src/utils/multer.js";
+import productsRouter from "./src/routes/Products.js";
+import createHash from "./src/utils/bcrypt.js";
+import chatRouter from "./src/routes/chat.js";
 
 
 const LocalStrategy = passportLocal.Strategy
