@@ -3,7 +3,6 @@ import path from 'path';
 import { adminAuth, loginAuth } from "../auth/authMiddleware.js";
 import {productDao} from "../daos/index.js"
 import dotenv from "dotenv"
-import { mailDisplay } from "../services/helpers.js";
 
 dotenv.config()
 const productsRouter = express.Router()

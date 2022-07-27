@@ -1,6 +1,5 @@
 import express from "express"
 import {loginAuth } from "../auth/authMiddleware.js";
-import {chatDao} from "../daos/index.js"
 import path from 'path';
 
 const chatRouter = express.Router()

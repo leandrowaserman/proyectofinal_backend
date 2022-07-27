@@ -3,7 +3,7 @@ import express from "express"
 import { orderDao, productDao, userDao } from "../daos/index.js";
 import { loginAuth } from "../auth/authMiddleware.js";
 import {cartMessage,newOrderMail,newOrderWhatsapp} from "../utils/messaging.js"
-import { cartDisplay, mailDisplay } from "../services/helpers.js";
+import { cartDisplay} from "../services/helpers.js";
 
 const cartRouter = express.Router()
 
